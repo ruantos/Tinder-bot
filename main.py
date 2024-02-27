@@ -51,11 +51,11 @@ time.sleep(3)
 notification_button = driver.find_element(By.XPATH, value='//*[@id="c-1177047094"]/main/div/div/div/div[3]/button[2]')
 notification_button.click()
 
-time.sleep(10)
+time.sleep(6)
 actions = ActionChains(driver)
 for i in range(100):
     actions.send_keys(Keys.ARROW_LEFT)
+    actions.perform()
     time.sleep(1)
 
-
-# driver.quit()
+driver.quit()
